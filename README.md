@@ -1,26 +1,32 @@
-# vim-arduino
-A vim plugin for automatic [Arduino](http://arduino.cc/) syntax generation and more...
-
-Status: pre-alpha
-
-----------
+# Arduvim
+Vim plugin for Arduino developers
 
 ## Installation
-Not Yet
 
-## Usage
-Not Yet
+Use your plugin manager of choice.
+
+- [Pathogen](https://github.com/tpope/vim-pathogen)
+  - `git clone https://github.com/z3t0/Arduvim ~/.vim/bundle/Arduvim`
+- [Vundle](https://github.com/gmarik/vundle)
+  - Add `Bundle 'https://github.com/z3t0/Arduvim'` to .vimrc
+  - Run `:BundleInstall`
+- [NeoBundle](https://github.com/Shougo/neobundle.vim)
+  - Add `NeoBundle 'https://github.com/z3t0/Arduvim'` to .vimrc
+  - Run `:NeoBundleInstall`
+- [vim-plug](https://github.com/junegunn/vim-plug)
+  - Add `Plug 'https://github.com/z3t0/Arduvim'` to .vimrc
+  - Run `:PlugInstall`
 
 ## Features
-* Nothing yet
+None yet
 
-## TODO
-* Create basic functionality
+## Todo
 
-## Contributing
-Not Yet
+1. Write a plugin
+2. Write documentation
+
+## Contribution
+Create issues for bugs and create pull requests for adding features
 
 ## Contributors
-- [z3t0](https://github.com/z3t0) - Owner and active contributor
-## Copyright Notice
-Coyright (c) 2015 Rafi Khan
+- (z3t0)
