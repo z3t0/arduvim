@@ -15,7 +15,7 @@ Use your plugin manager of choice.
   - Run `:NeoBundleInstall`
 - [vim-plug](https://github.com/junegunn/vim-plug)
   - Add `Plug 'https://github.com/z3t0/Arduvim'` to .vimrc
-  - Run `:PluginInstall`
+  - Run `:PlugInstall`
 
 ## Features
 None yet
@@ -29,4 +29,4 @@ None yet
 Create issues for bugs and create pull requests for adding features
 
 ## Contributors
-- (z3t0)
+- [z3t0](github.com/z3t0)
