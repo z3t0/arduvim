@@ -8,7 +8,7 @@ python sys.path.append(vim.eval('expand("<sfile>:h")'))
 " --------------------------------
 "  Function(s)
 " --------------------------------
-function! TemplateExample()
+function! Example()
 python << endOfPython
 
 from Arduvim import Arduvim_example
@@ -22,4 +22,4 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! Example call TemplateExample()
+command! Arduvim call Example
