@@ -24,6 +24,7 @@ None yet
 
 1. Write a plugin
 2. Write documentation
+3. Fix bugs and perform testing
 
 ## Contribution
 Create issues for bugs and create pull requests for adding features
