@@ -1,0 +1,26 @@
+*Arduvim.txt* A short multi line description of your plugin
+
+===============================================================================
+CONTENTS                                                              *Arduvim*
+
+    1. Intro .................................................. |Arduvim-intro|
+    2. Requirements .................................... |Arduvim-requirements|
+    3. Usage .................................................. |Arduvim-usage|
+    4. Licence .............................................. |Arduvim-licence|
+===============================================================================
+1. Intro                                                        *Arduvim-intro*
+
+This plugin can be used to add useful functionality like syntax highlighting
+and autocomplete for Arduino developers
+
+2. Requirements                                          *Arduvim-requirements*
+
+Vim with python support
+
+3. Usage                                                        *Arduvim-usage*
+
+How to use the plugin. What functions does it give the user?
+
+4. Licence                                                    *Arduvim-licence*
+
+GPLV3
