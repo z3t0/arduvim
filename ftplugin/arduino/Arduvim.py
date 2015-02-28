@@ -4,6 +4,5 @@ def Arduvim_example():
 def printPath():
     path = vim.eval('g:Arduvim_path')
     return path
-return path
 
 
