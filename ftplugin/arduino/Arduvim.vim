@@ -22,4 +22,4 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! Arduvim call Example
+call Example()
