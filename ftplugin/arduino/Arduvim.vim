@@ -27,7 +27,7 @@ lef g:loaded_Arduvim = 1
 function! Example()
 
 python << endOfPython
-
+import vim
 from Arduvim import printPath 
 
 print(printPath())
