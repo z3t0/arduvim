@@ -19,22 +19,7 @@ if exists("g:loaded_Arduvim")
         finish
 endif
 
-lef g:loaded_Arduvim = 1
-
-" --------------------------------
-"  Function(s)
-" --------------------------------
-function! Example()
-
-python << endOfPython
-import vim
-from Arduvim import printPath 
-
-print(printPath())
-
-endOfPython
-endfunction
-
+let g:loaded_Arduvim = 1
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
@@ -47,5 +32,27 @@ command! Arduvim call Hello()
 " --------------------------------
 "  Variables
 " --------------------------------
+if !exists('g:Arduvim_path')
+        echom 'Arduino IDE path not defined'
+endif
+
+
+" --------------------------------
+"  Function(s)
+" --------------------------------
+function! Example()
+
+python << endOfPython
+import vim
+
+
+def printPath():
+    path = vim.eval('g:Arduvim_path')
+    return path
+
+print(printPath())
+
+endOfPython
+endfunction
 
 
