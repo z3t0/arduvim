@@ -1,25 +1,25 @@
-*Arduvim.txt* A short multi line description of your plugin
+*arduvim.txt* A short multi line description of your plugin
 
 ===============================================================================
-CONTENTS                                                              *Arduvim*
+CONTENTS                                                              *arduvim*
 
-    1. Intro .................................................. |Arduvim-intro|
-    2. Requirements .................................... |Arduvim-requirements|
-    3. Usage .................................................. |Arduvim-usage|
-    4. Licence .............................................. |Arduvim-licence|
+    1. Intro .................................................. |arduvim-intro|
+    2. Requirements .................................... |arduvim-requirements|
+    3. Usage .................................................. |arduvim-usage|
+    4. Licence .............................................. |arduvim-licence|
 ===============================================================================
-1. Intro                                                        *Arduvim-intro*
+1. Intro                                                        *arduvim-intro*
 
 Overview of plugin
 
-2. Requirements                                          *Arduvim-requirements*
+2. Requirements                                          *arduvim-requirements*
 
 What additional programs are required to run the plugin
 
-3. Usage                                                        *Arduvim-usage*
+3. Usage                                                        *arduvim-usage*
 
 How to use the plugin. What functions does it give the user?
 
-4. Licence                                                    *Arduvim-licence*
+4. Licence                                                    *arduvim-licence*
 
 This is open source make sure to include a licence
