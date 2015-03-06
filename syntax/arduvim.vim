@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:    Arduino
 " Maintainer:  Rafi Khan <zetoslab@gmail.com>
-" Last Change: 02 March 2015
+" Last Change: 03 March 2015
 
 " Rafi Khan Copyright (c) 2015
 
