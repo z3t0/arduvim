@@ -32,7 +32,10 @@ Use your plugin manager of choice.
 
 ## Credits
 * [z3t0](https://github.com/z3t0) : Main contributor, maintainer and also owner of the repository.
+  - zetoslab@gmail.com
 * [sudar](https://github.com/sudar) : Owner and main contributor of the [vim-syntax](https://github.com/sudar/vim-arduino-syntax) that was instrumental in creating this plugin.
+* Kevin Sjöberg : Indent file
+  - kev.sjoberg@gmail.com>
 
 ## Copyright
 Copyright (c) 2015 Rafi Khan
