@@ -106,15 +106,6 @@ def gen_def(path, first):
             elif idx == 0:
                 bufferobj += '\t' + prefix + functionname + functions[idx]
             bufferobj += ' ' + functions[idx]
-"""
-    if len(operators) > 0:
-        for idx, val in enumerate(operators):
-            if idx % 10 == 0:
-                bufferobj += '\n' + '\t' + prefix + operatorname
-            elif idx == 0:
-                bufferobj += '\t' + prefix + operatorname + operators[idx]
-            bufferobj += ' ' + operators[idx]
-"""
 
     bufferobj += '\n' + '"}}}' + '\n'
 

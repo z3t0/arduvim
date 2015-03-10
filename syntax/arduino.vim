@@ -67,10 +67,6 @@ endif
 	syn keyword arduinoFunc endsWith startsWith equals equalsIgnoreCase getBytes indexOf lastIndexOf length replace setCharAt
 	syn keyword arduinoFunc substring toCharArray toInt Keyboard Mouse press release releaseAll accept click
 	syn keyword arduinoFunc move isPressed setup loop
-	syn keyword arduinoOperator += + [] = & | , // ?: {}
-	syn keyword arduinoOperator -- / /* . == < <= ++ != <<
-	syn keyword arduinoOperator < <= && ! || - % * () >>
-	syn keyword arduinoOperator ; -=
 "}}}
 "C:/Program Files (x86)/Arduino\libraries\Audio\keywords.txt{{{
 	syn keyword arduinoFunc Audio prepare write

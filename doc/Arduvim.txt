@@ -10,16 +10,26 @@ CONTENTS                                                              *arduvim*
 ===============================================================================
 1. Intro                                                        *arduvim-intro*
 
-Overview of plugin
+Syntax generation plugin for Arduino developers
 
 2. Requirements                                          *arduvim-requirements*
 
-What additional programs are required to run the plugin
+The version of vim needs to have been compiled with python2.7 support
 
 3. Usage                                                        *arduvim-usage*
 
-How to use the plugin. What functions does it give the user?
+To use this plugin you must specify your Arduino IDE directory, where your libraries are stored.
+Add this to your vimrc:
+
+let g:arduvim_path='PATH'
+
+Where PATH is replaced by the actual path.
+For example on Windows you may use something like this.
+
+let g:arduvim_path='C:/Program Files (x86)/Arduino'
+
+
 
 4. Licence                                                    *arduvim-licence*
 
-This is open source make sure to include a licence
+GPLv3
