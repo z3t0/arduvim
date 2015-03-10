@@ -21,12 +21,18 @@ Use your plugin manager of choice.
 
 ## Features
 * Automatic syntax generation for Arduino Libraries
+* Support for 3rd party plugins
 * Syntax Highlighting
-* Autocomplete support with 3rd party plugins
+* Autocomplete 
 
 ## TODO
 * Improve documentation
 * Allow for more than one directory to store libraries
+* Fix small bug on 2-word keywords
+
+## Credits
+* [z3t0](https://github.com/z3t0) : Main contributor, maintainer and also owner of the repository.
+* [sudar](https://github.com/sudar) : Owner and main contributor of the [vim-syntax](https://github.com/sudar/vim-arduino-syntax) that was instrumental in creating this plugin.
 
 ## Copyright
 Copyright (c) 2015 Rafi Khan
