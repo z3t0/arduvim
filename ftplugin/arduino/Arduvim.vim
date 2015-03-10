@@ -10,6 +10,7 @@ python sys.path.append(vim.eval('expand("<sfile>:h")'))
 "  Load Plugin
 " --------------------------------
 
+au BufRead,BufNewFile *.ino,*.pde set filetype=arduino
 
 if exists('g:loaded_arduvim')
         finish

@@ -10,7 +10,6 @@ def gen_list(path):
         for file in files:
             if file.endswith("keywords.txt"):
                 keyword_files_list.append(os.path.join(root, file))
-    print(keyword_files_list)
     
 
     return get_def(keyword_files_list)
@@ -24,10 +23,9 @@ def get_def(keyword_files_list):
             first = True
         else:
             first = False
-        i += val
+        i += '"' + val + '{{{'
         i += gen_def(keyword_files_list[idx], first)
 
-    print(i)
     return i
 
 def gen_def(path, first):
@@ -54,7 +52,7 @@ def gen_def(path, first):
 
             if line[0] == '#':
                 if first:
-                    print (line)
+                    continue
                 if '#######################################' in line:
                     continue
                 else:
@@ -64,7 +62,7 @@ def gen_def(path, first):
                 try:
                     keyword, word = line.split('\t')[:2]
                 except:
-                    print(line)
+                    print "Exception in line: " + line
                 if keyword.isupper():
                     constants.append(keyword)
                 elif "datatypes" in heading:
@@ -81,7 +79,7 @@ def gen_def(path, first):
                 elif "USB" in heading:
                     functions.append(keyword)
                 else:
-                    print(keyword)
+                    print "Exception in: " + keyword
 
 
 
@@ -108,7 +106,7 @@ def gen_def(path, first):
             elif idx == 0:
                 bufferobj += '\t' + prefix + functionname + functions[idx]
             bufferobj += ' ' + functions[idx]
-
+"""
     if len(operators) > 0:
         for idx, val in enumerate(operators):
             if idx % 10 == 0:
@@ -116,9 +114,9 @@ def gen_def(path, first):
             elif idx == 0:
                 bufferobj += '\t' + prefix + operatorname + operators[idx]
             bufferobj += ' ' + operators[idx]
+"""
 
-
-    bufferobj += '"}}}' + '\n'
+    bufferobj += '\n' + '"}}}' + '\n'
 
     return bufferobj
 
@@ -141,21 +139,20 @@ def arduvim():
     import vim
     import datetime
     arduino_dir = vim.eval('g:arduvim_path')
-    print arduino_dir
     path = os.path.dirname(os.path.realpath(__file__))
     temppath = os.path.join(path, 'template.txt')
     template = string.Template(open(temppath).read())
 
     syntaxpath = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
-    filepath = os.path.join(syntaxpath, "syntax", "arduvim.vim")
+    filepath = os.path.join(syntaxpath, "syntax", "arduino.vim")
     arduvim = open(filepath, 'w')
 
     arduvim.write(template.substitute({
         'date': datetime.datetime.now().strftime('%d %B %Y'),
         'arduino_version': get_arduino_version(arduino_dir),
-        'rules': gen_list(path),
+        'rules': gen_list(arduino_dir),
         }))
     arduvim.close()
-    print arduvim
+    print "Arduino sytax file has been generated! Please restart Vim"
 
 
