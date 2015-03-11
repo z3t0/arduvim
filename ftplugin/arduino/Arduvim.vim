@@ -27,7 +27,7 @@ function! GetPath()
 endfunction
 
 
-function! TemplateExample()
+function! ArduvimGenerate()
 python << endOfPython
 import arduvim
 sys.path.append(vim.eval('expand("<sfile>:h")'))
@@ -39,4 +39,4 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! Example call TemplateExample()
+command! Example call ArduvimGenerate()

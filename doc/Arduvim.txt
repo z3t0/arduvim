@@ -21,12 +21,19 @@ The version of vim needs to have been compiled with python2.7 support
 To use this plugin you must specify your Arduino IDE directory, where your libraries are stored.
 Add this to your vimrc:
 
-let g:arduvim_path='PATH'
+    let g:arduvim_path='PATH'
 
 Where PATH is replaced by the actual path.
 For example on Windows you may use something like this.
 
-let g:arduvim_path='C:/Program Files (x86)/Arduino'
+    let g:arduvim_path='C:/Program Files (x86)/Arduino'
+
+To generate the syntax file you need to be inside an arduino file and then:
+    :call ArduvimGenerate()
+Any errors will be shown and the file will be generated.
+
+Please report errors that specify a keyword. "Version not found" errors can be
+safely ignored.
 
 
 
