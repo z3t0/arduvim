@@ -112,6 +112,7 @@ def gen_def(path, first):
     return bufferobj
 
 def get_arduino_version(arduino_dir):
+    import os
     
     try:
         version_file = os.path.join(arduino_dir, 'lib', 'version.txt')
