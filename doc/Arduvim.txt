@@ -14,7 +14,7 @@ Syntax generation plugin for Arduino developers
 
 2. Requirements                                          *arduvim-requirements*
 
-The version of vim needs to have been compiled with python2.7 support
+The version of vim needs to have been compiled with python3.9 support
 
 3. Usage                                                        *arduvim-usage*
 

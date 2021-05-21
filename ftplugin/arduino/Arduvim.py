@@ -62,7 +62,7 @@ def gen_def(path, first):
                 try:
                     keyword, word = line.split('\t')[:2]
                 except:
-                    print "Exception in line: " + line
+                    print("Exception in line: " + line)
                 if keyword.isupper():
                     constants.append(keyword)
                 elif "datatypes" in heading:
@@ -79,7 +79,7 @@ def gen_def(path, first):
                 elif "USB" in heading:
                     functions.append(keyword)
                 else:
-                    print "Exception in: " + keyword
+                    print("Exception in: " + keyword)
 
 
 
@@ -144,6 +144,6 @@ def arduvim():
         'rules': gen_list(arduino_dir),
         }))
     arduvim.close()
-    print "Arduino sytax file has been generated! Please restart Vim"
+    print("Arduino sytax file has been generated! Please restart Vim")
 
 

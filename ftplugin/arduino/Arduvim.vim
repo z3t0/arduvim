@@ -1,9 +1,9 @@
 " --------------------------------
 " Add our plugin to the path
 " --------------------------------
-python import sys
-python import vim
-python sys.path.append(vim.eval('expand("<sfile>:h")'))
+python3 import sys
+python3 import vim
+python3 sys.path.append(vim.eval('expand("<sfile>:h")'))
 
 
 " --------------------------------
@@ -28,10 +28,10 @@ endfunction
 
 
 function! ArduvimGenerate()
-python << endOfPython
-import arduvim
+python3 << endOfPython
+import Arduvim
 sys.path.append(vim.eval('expand("<sfile>:h")'))
-arduvim.arduvim()
+Arduvim.arduvim()
 
 endOfPython
 endfunction
