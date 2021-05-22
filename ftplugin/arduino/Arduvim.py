@@ -72,7 +72,7 @@ def gen_def(path, first):
                     constants.append(keyword)
                 elif "datatypes" in heading:
                     types.append(keyword)
-                elif "operator" in heading:
+                elif "operator" or "operators" in heading:
                     operators.append(keyword)    
                 elif "constant" in heading:
                     constants.append(keyword)
