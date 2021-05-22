@@ -42,11 +42,13 @@ def gen_def(path, first):
     types = []
     functions = []
     operators = []
+    structures = []
 
     constantname = 'arduinoConstant'
     typename = 'arduinoType'
     functionname = 'arduinoFunc'
     operatorname = 'arduinoOperator'
+    structurename = 'arduinoStructure'
 
     prefix = 'syn keyword '
 
@@ -56,8 +58,8 @@ def gen_def(path, first):
         if line.rstrip():
 
             if line[0] == '#':
-                if first:
-                    continue
+                #if first: # Appears to ignore the system keywords.txt file, but it has non-standard syntax we need to deal with
+                #    continue
                 if '#######################################' in line:
                     continue
                 else:
@@ -65,26 +67,33 @@ def gen_def(path, first):
             else:
 
                 try:
-                    keyword, word = line.split('\t')[:2]
+                    # Standard format is 'keyword\t keyword_type'
+                    #   optionally followed by other information
+                    # Some contributed libraries don't use a proper tab
+                    #   character, so split on all whitespace
+                    keyword, word = line.split()[:2]
                 except:
-                    print("Exception in line: " + line)
-                if keyword.isupper():
+                    try:
+                        # See if it's an undefined keyword that we can parse out later by heading
+                        keyword = line
+                        word = ''
+                    except:
+                        # Give up and don't process it
+                        print("Exception in line: " + line)
+                if keyword.isupper(): # Based on C notation
                     constants.append(keyword)
-                elif "datatypes" in heading:
+                elif "KEYWORD1" in word: # KEYWORD1 specifies classes, datatypes, and C++ keywords
                     types.append(keyword)
-                elif "operator" or "operators" in heading:
-                    operators.append(keyword)    
-                elif "constant" in heading:
+                elif "KEYWORD2" in word: # KEYWORD2 specifies methods and functions
+                    functions.append(keyword)
+                elif "KEYWORD3" in word: # KEYWORD3 specifies structures
+                    structures.append(keyword)
+                elif "LITERAL1" in word: # LITERAL1 specifies constants
                     constants.append(keyword)
-                elif "method" or "Method" or "Methods" or "methods" in heading:
-                    functions.append(keyword)
-                elif "function" in heading:
-                    continue
-                    functions.append(keyword)
-                elif "USB" in heading:
-                    functions.append(keyword)
+                elif "operator" in heading: # There is no specific Arduino keyword for operators, so try to discover them
+                    operators.append(keyword)
                 else:
-                    print("Exception in: " + keyword)
+                    print("Exception - no keyword type for: " + keyword)
 
 
 
