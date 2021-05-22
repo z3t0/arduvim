@@ -1,6 +1,6 @@
 
 
-def gen_list(path):
+def gen_list(path, path_user):
     import os
     folders_to_ignore = ['drivers','examples','hardware', 'java', 'reference','tools']
     
@@ -11,6 +11,11 @@ def gen_list(path):
             if file.endswith("keywords.txt"):
                 keyword_files_list.append(os.path.join(root, file))
     
+    if path_user!='':
+        for root, dirs, files, in os.walk(path_user):
+            for file in files:
+                if file.endswith("keywords.txt"):
+                    keyword_files_list.append(os.path.join(root, file))
 
     return get_def(keyword_files_list)
 
@@ -131,6 +136,10 @@ def arduvim():
     import vim
     import datetime
     arduino_dir = vim.eval('g:arduvim_path')
+    try:
+        arduino_dir_user = vim.eval('g:arduvim_path_user')
+    except:
+        arduino_dir_user = ''
     path = os.path.dirname(os.path.realpath(__file__))
     temppath = os.path.join(path, 'template.txt')
     template = string.Template(open(temppath).read())
@@ -142,7 +151,7 @@ def arduvim():
     arduvim.write(template.substitute({
         'date': datetime.datetime.now().strftime('%d %B %Y'),
         'arduino_version': get_arduino_version(arduino_dir),
-        'rules': gen_list(arduino_dir),
+        'rules': gen_list(arduino_dir, arduino_dir_user),
         }))
     arduvim.close()
     print("Arduino sytax file has been generated! Please restart Vim")

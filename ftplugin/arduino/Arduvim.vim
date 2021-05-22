@@ -23,7 +23,9 @@ let g:loaded_arduvim = 1
 " --------------------------------
 function! GetPath()
     let s:arduino_dir = expand('<sfile>:p:h:h')
+    let s:arduino_dir_user = expand('<sfile>:p:h:h')
     echom s:arduino_dir
+    echom s:arduino_dir_user
 endfunction
 
 
