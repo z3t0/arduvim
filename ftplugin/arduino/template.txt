@@ -34,3 +34,4 @@ hi def link arduinoFunc Function
 hi def link arduinoMethod Function
 hi def link arduinoIdentifier Identifier
 hi def link arduinoOperator Operator
+hi def link arduinoStructure Structure

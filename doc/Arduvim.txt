@@ -14,7 +14,7 @@ Syntax generation plugin for Arduino developers
 
 2. Requirements                                          *arduvim-requirements*
 
-The version of vim needs to have been compiled with python2.7 support
+The version of vim needs to have been compiled with python3.9 support
 
 3. Usage                                                        *arduvim-usage*
 
@@ -27,6 +27,15 @@ Where PATH is replaced by the actual path.
 For example on Windows you may use something like this.
 
     let g:arduvim_path='C:/Program Files (x86)/Arduino'
+
+If you have a local user directory for IDE-installed libraries, add this to
+your vimrc:
+
+    let g:arduvim_path_user='PATH'
+
+Note that the full path must be specified. For example, on linux:
+
+    let g:arduvim_path_user='/home/username/Arduino'
 
 To generate the syntax file you need to be inside an arduino file and then:
     :call ArduvimGenerate()
